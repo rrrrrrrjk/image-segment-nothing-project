@@ -7,11 +7,15 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-./python/venv
+# Python virtual environment
+/python/venv
 
-./web/node_modules
-./web/dist
-./web/dist-ssr
+# Node modules and build directories
+/web/node_modules
+/web/dist
+/web/dist-ssr
+
+# Local files
 *.local
 
 # Editor directories and files

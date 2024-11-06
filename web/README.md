@@ -1,0 +1,2 @@
+## Install Package
+$ npm i
