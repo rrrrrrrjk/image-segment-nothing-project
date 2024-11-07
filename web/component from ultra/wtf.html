@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #e5e5e5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slider-container {
+            width: min(1200px, 90vw);
+            margin: auto;
+        }
+
+        .slider {
+            width: 100%;
+            height: var(--height, 200px);
+            overflow: hidden;
+            position: relative;
+            mask-image: linear-gradient(
+                to right,
+                transparent,
+                #000 10% 90%,
+                transparent
+            );
+            -webkit-mask-image: linear-gradient(
+                to right,
+                transparent,
+                #000 10% 90%,
+                transparent
+            );
+        }
+
+        .slider .list {
+            display: flex;
+            gap: 20px;
+            position: relative;
+            width: fit-content;
+        }
+
+        .slider .item {
+            width: var(--width, 300px);
+            height: var(--height, 200px);
+            flex-shrink: 0;
+            position: relative;
+            animation: slideAnimation var(--duration, 20s) linear infinite;
+            transition: all 0.3s ease;
+        }
+
+        .slider .item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        @keyframes slideAnimation {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(calc(-100% - 20px));
+            }
+        }
+
+        .slider:hover .item {
+            animation-play-state: paused;
+            filter: grayscale(0.8);
+        }
+
+        .slider .item:hover {
+            filter: grayscale(0);
+            transform: scale(1.05);
+            z-index: 1;
+        }
+
+        .slider[data-reverse="true"] .item {
+            animation-name: slideAnimationReverse;
+        }
+
+        @keyframes slideAnimationReverse {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(calc(100% + 20px));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider" style="--width: 300px; --height: 200px; --duration: 20s;">
+            <div class="list">
+                <div class="item" style="--position: 1"><img src="images/slider1_1.jpg" alt=""></div>
+                <div class="item" style="--position: 2"><img src="images/slider1_2.jpg" alt=""></div>
+                <div class="item" style="--position: 3"><img src="images/slider1_3.jpg" alt=""></div>
+                <div class="item" style="--position: 4"><img src="images/slider1_4.jpg" alt=""></div>
+                <div class="item" style="--position: 5"><img src="images/slider1_5.jpg" alt=""></div>
+                <div class="item" style="--position: 6"><img src="images/slider1_6.jpg" alt=""></div>
+                <div class="item" style="--position: 7"><img src="images/slider1_7.jpg" alt=""></div>
+                <div class="item" style="--position: 8"><img src="images/slider1_8.jpg" alt=""></div>
+                <div class="item" style="--position: 9"><img src="images/slider1_9.jpg" alt=""></div>
+                <div class="item" style="--position: 10"><img src="images/slider1_10.jpg" alt=""></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
