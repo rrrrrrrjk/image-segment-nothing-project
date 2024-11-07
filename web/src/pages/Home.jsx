@@ -1,8 +1,17 @@
 import React from 'react'
+import Hero from '../sections/Hero'
+import Footer from '../sections/Footer'
 
 export const Home = () => {
   return (
-    <div>home</div>
+    <>
+      <section>
+        <Hero/>
+      </section>
+      <section>
+        <Footer/>
+      </section>
+    </>
   )
 }
 export default Home
