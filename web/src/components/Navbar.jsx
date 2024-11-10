@@ -5,7 +5,7 @@ import { navLinks } from '../constant'
 const Navbar = () => {
   return (
     <header>
-        <nav className='flex px-20 justify-between py-5 bg-gradient-to-b from-gray-800 to-transparent to-70% text-white'>
+        <nav className='flex px-20 justify-between py-5 bg-gradient-to-b from-gray-800 to-transparent to-70% text-white sticky top-0 z-50'>
             <div className='flex flex-col -space-y-3 '>
                 <h1 className='font-grifter text-[32px] drop-shadow-md'>Segment Nothing</h1>
                 <span className='font-inter text-[16px] text-slate-400 drop-shadow-md'>Research by Su team</span>
