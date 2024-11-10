@@ -9,10 +9,10 @@ function App() {
   return (
     <>
       <Background/>
-      <div className="relative z-10">
-        <Navbar/>
-        <Outlet />
-      </div>
+      <Navbar/>
+      <div className='relative z-10'>
+        <Outlet/>
+      </div>           
     </>
   )
 }
