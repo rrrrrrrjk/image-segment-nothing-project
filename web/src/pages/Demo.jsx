@@ -1,8 +1,11 @@
 import React from 'react'
+import Uploadfile from '../components/Uploadfile'
 
 export const Demo = () => {
   return (
-    <div>demo</div>
+    <>
+      <Uploadfile/>
+    </>
   )
 }
 export default Demo
