@@ -9,7 +9,10 @@ lerna-debug.log*
 
 # Python virtual environment
 /python/venv
-
+runs
+weights
+flowers_segmentation.v19-only-oxford-flower-dataset-102_-no-augmentation.yolov11.zip
+yolo11n.pt
 # Node modules and build directories
 /web/node_modules
 /web/dist
