@@ -10,8 +10,9 @@ const Hero = () => {
         <p className='font-inter text-[20px] text-slate-400'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum atque maxime eveniet voluptatum ab debitis similique error dignissimos accusamus, ea illum sed quidem consectetur distinctio, nesciunt corrupti incidunt quis optio!</p>
         <Button/>
       </div>
-      <div className='relative flex-1 flex justify-end items-center mr-11'>
-        <img src={hero} alt="hero" className="w-[647px] h-[529px] object-cover rounded-[31px] shadow-2xl shadow-cyan-500/50"/>
+      <div className='relative flex-1 flex items-end flex-col -space-y-3'>
+        <img src={hero} alt="hero" className="w-[647px] h-[529px] object-cover rounded-[31px] shadow-[0_0_60px_20px] shadow-cyan-500/50"/>
+        <div className='h-[33px] w-[647px] bg-black rounded-[8px] blur-[18px] '></div>
       </div>
     </section>
   )

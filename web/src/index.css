@@ -9,7 +9,10 @@
     font-family: "grifter";
     src: url('/fonts/grifterbold.otf') format('opentype');
   }
-  body {
-    
+}
+
+@layer utilities{
+  .pause {
+    animation-play-state: paused;
   }
 }
