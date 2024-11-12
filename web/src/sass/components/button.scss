@@ -1,0 +1,109 @@
+.button-container {
+    position: relative;
+    display: inline-block;
+    border-radius: 17px;
+}
+
+.button-container::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 8px;
+    background: #F54A7A;
+    filter: blur(8px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.button-container:hover::before {
+    opacity: 1;
+}
+
+.explore-btn {
+    position: relative;
+    width: 220px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background: transparent;
+    border: 4px solid #F54A7A;
+    border-radius: 17px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.7s ease;
+    z-index: 1;
+    
+}
+
+.explore-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 400%;
+    height: 200%;
+    background: #F54A7A;
+    transform: translateX(110%) skewX(-44deg);
+    transition: transform 0.5s ease;
+    z-index: -1;
+}
+
+.button-container:hover .explore-btn {
+    color: #ffffff;
+}
+
+.button-container:hover .explore-btn::before {
+    transform: translateX(-13%) skewX(-45deg);
+}
+
+.text-container {
+    position: relative;
+    height: 26px;
+    overflow: hidden;
+    line-height: normal;
+}
+
+.static-text,
+.hover-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.static-text {
+    transform: translateY(0);
+    font-family: 'Grifter', sans-serif;
+}
+
+.hover-text {
+    transform: translateY(150%);
+    font-family: 'Grifter', sans-serif;
+}
+
+.static-text::after {
+    content: '→';
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+}
+
+.button-container:hover .static-text {
+    transform: translateY(-100%);
+}
+
+.button-container:hover .hover-text {
+    transform: translateY(0);
+}
+
+.button-container:hover .static-text::after {
+    transform: translateX(5px);
+}

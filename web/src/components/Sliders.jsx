@@ -1,11 +1,12 @@
 import React from "react";
 import { sliderImg } from "../constant";
+import '../sass/components/slider.scss'
 
 const Sliders = () => {
   return (
     <>
       <div className="flex flex-nowrap space-x-[8px] overflow-hidden">
-        <ul className="flex flex-nowrap space-x-[8px] animate-loop-scroll hover:pause ">
+        <ul className="flex flex-nowrap space-x-[8px] animate-loop-scroll hover:pause slider-container">
           {sliderImg.map((item, index) => (
             <li
               key={index}
@@ -14,14 +15,14 @@ const Sliders = () => {
               <img
                 src={item}
                 alt="slider"
-                className="rounded-[28px] h-[240px] hover:drop-shadow-lg"
+                className="rounded-[28px] h-[240px] hover:drop-shadow-lg slider-img"
               />
             </li>
           ))}
         </ul>
       </div>
       <div className="flex flex-nowrap space-x-[8px] overflow-hidden -mt-8">
-        <ul className="flex flex-nowrap space-x-[8px] animate-rev-loop-scroll hover:pause">
+        <ul className="flex flex-nowrap space-x-[8px] animate-rev-loop-scroll hover:pause slider-container">
           {sliderImg.map((item, index) => (
             <li
               key={index}
@@ -30,7 +31,7 @@ const Sliders = () => {
               <img
                 src={item}
                 alt="slider"
-                className="rounded-[28px] h-[240px] hover:drop-shadow-lg"
+                className="rounded-[28px] h-[240px] hover:drop-shadow-lg slider-img"
               />
             </li>
           ))}
