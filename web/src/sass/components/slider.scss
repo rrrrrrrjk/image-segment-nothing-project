@@ -1,0 +1,4 @@
+.slider-container:hover .slider-img:not(:hover) {
+    filter: grayscale(1) blur(6px);
+    z-index: -99;
+}

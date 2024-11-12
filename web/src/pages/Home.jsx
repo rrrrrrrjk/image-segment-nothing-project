@@ -1,7 +1,7 @@
 import React from 'react'
 import Hero from '../sections/Hero'
 import Footer from '../sections/Footer'
-import Sliders from '../components/Sliders'
+import Example from '../sections/Example'
 
 export const Home = () => {
   return (
@@ -10,7 +10,7 @@ export const Home = () => {
         <Hero/>
       </section>
       <section>
-        <Sliders/>
+        <Example/>
       </section>
       <section>
         <Footer/>

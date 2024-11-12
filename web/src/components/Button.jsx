@@ -1,12 +1,20 @@
 import React from 'react'
-import arrowRight from "../assets/icons/arrow-right.svg"
+import { Link } from 'react-router-dom'
+import '../sass/components/button.scss'
 
 const Button = () => {
   return (
-    <button className='flex justify-center items-center gap-2 px-15 py-30 text-[18px] font-grifter text-white border-[#F54A7A] border-4 rounded-[17px] w-[205px] h-[58px] shadow-2xl'>
-        Explore now
-        <img src={arrowRight} alt="Right Arrow" className='w-7 h-7 stroke-white'/>
-    </button>
+    <div class="button-container" id="buttonContainer">
+      <Link to="/demo">
+        <button class="explore-btn drop-shadow-2xl">
+          
+            <div class="text-container drop-shadow-2xl">
+              <span class="static-text">Explore Now</span>
+              <span class="hover-text" id="hoverText">Get Started</span>
+            </div>
+        </button>
+      </Link>
+   </div>
   )
 }
 
