@@ -20,7 +20,7 @@ const Navbar = () => {
                         </li>
                     ))
                 }
-            </ul>
+            </ul>                
         </nav>
     </header>   
   )
