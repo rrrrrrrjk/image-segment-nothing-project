@@ -8,7 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 # Python virtual environment
-
+runs
 # Node modules and build directories
 /web/node_modules
 /web/dist
