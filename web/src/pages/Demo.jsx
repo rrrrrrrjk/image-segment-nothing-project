@@ -49,7 +49,7 @@ export const Demo = () => {
 
   return (
     <section className='min-h-screen w-full flex justify-start items-center px-[50px] gap-8'>
-      <div className='w-[20%] min-w-[375px] h-[70vh] bg-white p-[8px] rounded-[41px] bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60'>
+      <div className='w-[20%] min-w-[375px] h-[70vh] bg-white p-4 rounded-[44px] bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60'>
         <Uploadfile getImageUploaded={getImageUploaded}/>
         {/* <a href={dataUri} download onClick={e => download}>click here</a> */}
       </div>
