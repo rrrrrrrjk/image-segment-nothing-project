@@ -1,12 +1,10 @@
 import React, { useEffect } from 'react'
 import "../sass/components/ImageSegment.scss"
 import * as tf from '@tensorflow/tfjs';
-import * as tfn from '@tensorflow/tfjs-node';
 
 
 async function loadModels() {
-  const handler = tfn.io.fileSystem('../Tensor/model.json');
-  const model = await tf.loadLayersModel(handler);
+  const model = await tf.loadLayersModel('https://raw.githubusercontent.com/rrrrrrrjk/image-segment-nothing-project/refs/heads/ley/web/src/Tensor/model.json?token=GHSAT0AAAAAACZ6MYACXIZLBLGFGUWCJZTGZZWF4PQ');
   return model
 }
 
