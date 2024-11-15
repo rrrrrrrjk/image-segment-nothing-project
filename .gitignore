@@ -9,6 +9,8 @@ lerna-debug.log*
 
 # Python virtual environment
 runs
+python/yolo11x-seg.pt
+python/yolo11x_segment_web_model.zip
 # Node modules and build directories
 /web/node_modules
 /web/dist
