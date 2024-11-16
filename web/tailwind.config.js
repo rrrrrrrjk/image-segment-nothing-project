@@ -24,6 +24,9 @@ export default {
           from: { transform: "translateX(-50%)"},
           to: { transform: "translateX(0)"}
         }
+      },
+      transitionProperty: {
+        'height' : 'height',
       }
     }
   },

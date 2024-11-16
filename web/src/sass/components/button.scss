@@ -107,3 +107,9 @@
 .button-container:hover .static-text::after {
     transform: translateX(5px);
 }
+
+.button-container{
+    @media (min-width: 1280px) {
+ 
+    }
+}

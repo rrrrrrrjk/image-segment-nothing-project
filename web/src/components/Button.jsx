@@ -4,13 +4,13 @@ import '../sass/components/button.scss'
 
 const Button = () => {
   return (
-    <div class="button-container" id="buttonContainer">
+    <div className="button-container " id="buttonContainer">
       <Link to="/demo">
-        <button class="explore-btn drop-shadow-2xl">
+        <button className="explore-btn drop-shadow-2xl">
           
-            <div class="text-container drop-shadow-2xl">
-              <span class="static-text">Explore Now</span>
-              <span class="hover-text" id="hoverText">Get Started</span>
+            <div className="text-container drop-shadow-2xl">
+              <span className="static-text">Explore Now</span>
+              <span className="hover-text" id="hoverText">Get Started</span>
             </div>
         </button>
       </Link>
