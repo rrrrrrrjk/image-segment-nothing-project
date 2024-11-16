@@ -4,7 +4,7 @@ import * as tf from '@tensorflow/tfjs';
 
 
 async function loadModels() {
-  const model = await tf.loadLayersModel('https://raw.githubusercontent.com/rrrrrrrjk/image-segment-nothing-project/refs/heads/ley/web/src/Tensor/model.json?token=GHSAT0AAAAAACZ6MYACXIZLBLGFGUWCJZTGZZWF4PQ');
+  const model = await tf.loadLayersModel('https://raw.githubusercontent.com/rrrrrrrjk/image-segment-nothing-project/refs/heads/ley/python/Model/model.json?token=GHSAT0AAAAAACZ6MYACFSLGWKVVDI5B2C5UZZWGAYQ');
   return model
 }
 
