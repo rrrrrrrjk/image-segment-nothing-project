@@ -67,7 +67,7 @@ const Navbar = () => {
                   <li key={item.label}>
                     <Link
                       to={item.link}
-                      className='px-4 py-1 after:content-[""] after:block after:w-full after:h-[2px] after:bg-current after:scale-x-0 after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-300 ease-in-out'
+                      className='flex justify-start items-center px-4 py-4 hover:bg-[#F54A7A] hover:bg-opacity-70 rounded-lg transition ease-in-out'
                       onClick={() => setIsOpen(false)}
                     >
                       {item.label}

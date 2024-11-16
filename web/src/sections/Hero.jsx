@@ -6,10 +6,10 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="w-full min-h-screen flex xl:flex-row flex-col xl:justify-between px-20 text-white xl:items-center"
+      className="w-full min-h-screen flex 2xl:flex-row flex-col 2xl:justify-between px-20 text-white 2xl:items-center"
     >
-      <div className="flex flex-col xl:text-start text-center items-center justify-center xl:justify-between xl:items-start xl:w-2/5 w-full gap-5 mt-16 mb-16 xl:mt-0 xl:mb-0">
-        <h1 className="font-grifter text-[32px] xl:text-[50px]">
+      <div className="flex flex-col 2xl:text-start text-center items-center justify-center 2xl:justify-between 2xl:items-start 2xl:w-2/5 w-full gap-5 mt-16 mb-16 2xl:mt-0 2xl:mb-0">
+        <h1 className="font-grifter text-[32px] xl:text-[50px] text-nowrap">
           What are we doing ?
         </h1>
         <p className="font-inter xl:text-[20px] text-slate-400">
@@ -20,7 +20,7 @@ const Hero = () => {
         </p>
         <Button />
       </div>
-      <div className="relative flex-1 flex xl:items-end items-center flex-col -space-y-3 group">
+      <div className="relative flex-1 flex 2xl:items-end items-center flex-col -space-y-3 group">
         <img
           src={hero}
           alt="hero"
