@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 const Uploadfile = () => {
   const dispatch = useDispatch();
 
-  const fileToDataUri = (file) => new Promise((resolve, reject) => {
+  const fileToDataUri = (file) => new Promise((resolve) => {
     const reader = new FileReader();
     reader.onload = (event) => {
       resolve(event.target.result)
@@ -17,15 +17,13 @@ const Uploadfile = () => {
 
   const getImageUploaded = (file) => {
     if (!file) {
-      // dispatch(setImageUrl(''));
+      dispatch(setImageUrl(''));
       return;
     }
 
     fileToDataUri(file)
       .then(dataUri => {
-        console.log(dataUri);
         dispatch(setImageUrl(dataUri));
-        console.log(imageUrl.image.imageUrl);
       })
   }
 
