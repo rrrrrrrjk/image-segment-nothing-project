@@ -1,5 +1,10 @@
 from ultralytics import YOLO
 
 model = YOLO("latest-flower.pt") 
+# model.export(format="onnx")
 
-results = model.train(data="coco-seg.yaml", epochs=100, imgsz=640, resume=True)
+results = model("./flower.jpg")
+
+for img in results:
+    img.show()
+    
