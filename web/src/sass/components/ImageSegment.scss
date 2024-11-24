@@ -1,18 +1,15 @@
 @use "../abstracts/colors";
 
 .image-segment-container {
-    width: clamp(300px, auto, 100%);
-    border-radius: 2rem;
-    border: 0.1rem solid colors.$purple-bg;
-
+  width: clamp(300px, auto, 100%);
+  border-radius: 2rem;
+  border: 0.1rem solid colors.$purple-bg;
 }
 
-
 .Image-Segment {
-    padding: 2rem;
-    width: fit-content;
-    height: auto;
-    max-height: 80vh;
-    width: clamp(320px, 80%, auto);
-
+  padding: 2rem;
+  width: fit-content;
+  height: auto;
+  max-height: 80vh;
+  width: clamp(320px, 80%, auto);
 }
