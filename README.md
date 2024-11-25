@@ -23,8 +23,10 @@ This project is a web-based Deep-Learning integration that provides advanced ima
   - Ultralytics API for image segmentation
 
 ## Installation and Setup
-- Nodejs
-- Docker
+```
+$ git clone https://github.com/rrrrrrrjk/image-segment-nothing-project.git
+```
+
 ### Prerequisites
 Ensure you have the following installed:
 - Node.js (v16 or later)
@@ -34,7 +36,6 @@ Ensure you have the following installed:
 ### Project Setup
 ------
 ```
-$ git clone
 $ cd image-segment-nothing-project
 $ docker compose up -d
 ```
