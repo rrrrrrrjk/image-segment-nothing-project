@@ -39,7 +39,8 @@ Ensure you have the following installed:
 $ cd image-segment-nothing-project
 $ docker compose up -d
 ```
-## Terminate
+### Terminate
+------
 ```
 $ docker compose down
 ```
