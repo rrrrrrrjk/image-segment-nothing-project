@@ -13,10 +13,11 @@ const Hero = () => {
           What are we doing ?
         </h1>
         <p className="font-inter xl:text-[20px] text-slate-400">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum
-          atque maxime eveniet voluptatum ab debitis similique error dignissimos
-          accusamus, ea illum sed quidem consectetur distinctio, nesciunt
-          corrupti incidunt quis optio!
+          Experience the Next Generation of Image Segmentation. Our advanced
+          model seamlessly identifies and extracts flowers, cars, and animals
+          from any image, offering clear, structured visuals for analysis,
+          design, and AI development. Let our technology bring new insights and
+          organization to your image processing.
         </p>
         <Button />
       </div>
@@ -27,7 +28,6 @@ const Hero = () => {
           className="w-[375px] h-[307px] lg:w-[647px] lg:h-[529px] object-cover rounded-[31px] shadow-[0_0_60px_20px] shadow-cyan-500/50"
         />
         <div className="h-[33px] lg:w-[647px] w-[375px] bg-black rounded-[8px] blur-[18px] "></div>
-        
       </div>
     </section>
   );
