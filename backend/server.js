@@ -11,25 +11,12 @@ const upload = multer();
 
 app.use(cors());
 
-// const url = "https://predict.ultralytics.com";
-// const headers = {
-//   "x-api-key": "6b80a06badc0014fa56769630ac9c20a123499920f"
-// };
-
-// // Define the data
-// const data = {
-//   model: "https://hub.ultralytics.com/models/QxL8NIMSWfIJFjk4KSyM",
-//   imgsz: 640,
-//   conf: 0.25,
-//   iou: 0.45
-// };
-
 const url = "https://predict.ultralytics.com";
 const headers = { "x-api-key": "6b80a06badc0014fa56769630ac9c20a123499920f" };
 // const headers = { "x-api-key": "b4b855396ff84d51061ad93b3aa1a19c6a877e5ee9" }; //ryw
 const data = {
   model: "https://hub.ultralytics.com/models/dwiRQRv5lyl8DxpmieaM", //original
-  // model: "https://hub.ultralytics.com/models/giTrjTlbKX6iBvnE4HTf",
+  // model: "https://hub.ultralytics.com/models/UqJ4ZRIAe03yk0154woQ",
   imgsz: 640,
   conf: 0.25,
   iou: 0.45,

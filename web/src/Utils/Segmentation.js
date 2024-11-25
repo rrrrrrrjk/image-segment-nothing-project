@@ -64,7 +64,7 @@ const highlightImg = (arr, imgHeight, imgWidth) => {
         pointerEvents: "none",
         zIndex: "100",
     });
-    if (imgWidth < 640) {
+    if (imgHeight < 640) {
         overlayImage.style.margin = "2rem";
     }else {
         overlayImage.style.padding = "2rem";

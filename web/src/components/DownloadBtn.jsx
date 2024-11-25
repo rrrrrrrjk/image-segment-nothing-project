@@ -3,9 +3,6 @@ import { FaDownload } from "react-icons/fa6";
 import "../sass/components/DownloadBtn.scss";
 import "../sass/components/ImageSegment.scss";
 
-import ReactCrop from "react-image-crop";
-import "react-image-crop/src/ReactCrop.scss";
-
 
 const DownloadBtn = ({ imageData, imageName, imageBox }) => {
   const [popUp, setPopUp] = useState("");
