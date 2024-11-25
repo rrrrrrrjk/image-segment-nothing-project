@@ -4,7 +4,7 @@ const Footer = () => {
   const teamMembers = [
     { name: 'Jakkraphat Kattiya', id: '6513110' },
     { name: 'Thanakrit Chutiwongthanaphat', id: '6513112' },
-    { name: 'Narawit pakkard', id: '6513113' },
+    { name: 'Narawit Phakarat', id: '6513113' },
     { name: 'Ananda Kongkoed', id: '6513177' }
   ];
 

@@ -44,7 +44,7 @@ const DownloadBtn = ({ imageData, imageName, imageBox }) => {
   return (
     <>
       <button
-        className="flex items-center w-[70%] flex-row justify-between bg-zinc-500 bg-opacity-65 p-3 rounded-3xl pl-6 pr-6 btn"
+        className="flex items-center w-[70%] flex-row justify-between bg-slate-400 bg-opacity-65 p-3 rounded-3xl pl-6 pr-6 btn "
         onClick={download}
         onMouseOver={handleHover}
         onMouseLeave={handleLeave}

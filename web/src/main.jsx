@@ -7,8 +7,8 @@ import {
 
 import './index.css'
 import App from './App.jsx'
-import Home from './pages/home.jsx';
-import Demo from './pages/demo.jsx';
+import Home from './pages/Home.jsx';
+import Demo from './pages/Demo.jsx';
 import NotFoundPage from './pages/NotFoundPage.jsx';
 import { Provider } from 'react-redux';
 import { store } from './state/store';
