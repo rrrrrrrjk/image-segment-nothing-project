@@ -13,7 +13,7 @@ import slider10 from '../assets/sliders/slider1_10.jpg'
 export const navLinks = [
     { link: '/', label: "Home"},
     { link: '/demo', label: 'Demo'},
-    { link: '#about-us', label: "About us"}
+    { link: '#footer', label: "About us", isScroll: true},
 ]
 
 export const sliderImg = [

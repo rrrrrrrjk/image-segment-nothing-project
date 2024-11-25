@@ -9,6 +9,16 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleNavClick = (isScroll) => {
+    if (isScroll) {
+      const footerElement = document.getElementById('footer');
+      if (footerElement) {
+        footerElement.scrollIntoView({ behavior: 'smooth' });
+      }
+      setIsOpen(false);
+    }
+  };
+
   return (
     <header className="sticky top-0 z-40">
       <nav className="flex px-20 justify-between py-5 bg-gradient-to-b from-gray-800 to-transparent to-70% text-white z-50 w-full h-1/6">
@@ -26,13 +36,21 @@ const Navbar = () => {
               key={item.label}
               className='after:content-[""] after:block after:w-full after:h-[2px] after:bg-current after:scale-x-0 after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-300 ease-in-out'
             >
-              <Link to={item.link} className="drop-shadow-xl">
-                {item.label}
-              </Link>
+              {item.isScroll ? (
+                <button
+                  onClick={() => handleNavClick(true)}
+                  className="drop-shadow-xl"
+                >
+                  {item.label}
+                </button>
+              ) : (
+                <Link to={item.link} className="drop-shadow-xl">
+                  {item.label}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
-        {/* Hamburger Menu */}
         <div className="relative xl:hidden">
           <button
             className="flex flex-col justify-center items-center cursor-pointer space-y-1"
@@ -65,13 +83,22 @@ const Navbar = () => {
               <ul className="flex flex-col font-grifter">
                 {navLinks.map((item) => (
                   <li key={item.label}>
-                    <Link
-                      to={item.link}
-                      className='flex justify-start items-center px-4 py-4 hover:bg-[#F54A7A] hover:bg-opacity-70 rounded-lg transition ease-in-out'
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
+                    {item.isScroll ? (
+                      <button
+                        onClick={() => handleNavClick(true)}
+                        className='flex justify-start items-center px-4 py-4 w-full text-left hover:bg-[#F54A7A] hover:bg-opacity-70 rounded-lg transition ease-in-out'
+                      >
+                        {item.label}
+                      </button>
+                    ) : (
+                      <Link
+                        to={item.link}
+                        className='flex justify-start items-center px-4 py-4 hover:bg-[#F54A7A] hover:bg-opacity-70 rounded-lg transition ease-in-out'
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
