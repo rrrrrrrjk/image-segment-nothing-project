@@ -1,4 +1,4 @@
-# Deep-Learning-Powered Image Segmentation and Download
+# Segment Nothing Project
 
 This project is a web-based Deep-Learning integration that provides advanced image segmentation capabilities. Users can upload images, process them using AI-powered segmentation, visualize segmented regions, and download the results.
 
