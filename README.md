@@ -12,6 +12,7 @@ This project is a web-based Deep-Learning integration that provides advanced ima
 - **Frontend**:
   - React
   - Tailwind CSS
+  - sass
   - React-Redux for state management
 - **Backend**:
   - Node.js
@@ -19,7 +20,7 @@ This project is a web-based Deep-Learning integration that provides advanced ima
   - Multer for file uploads
   - Sharp for image processing
   - Axios for API calls
-- **AI Model Integration**:
+- **Deep learning Model Integration**:
   - Ultralytics API for image segmentation
 
 ## Installation and Setup
@@ -32,6 +33,7 @@ Ensure you have the following installed:
 - Node.js (v16 or later)
 - npm or yarn
 - A compatible browser (e.g., Chrome, Firefox)
+- Docker
 
 ### Project Setup
 ------
