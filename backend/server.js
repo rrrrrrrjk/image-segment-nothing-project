@@ -11,17 +11,26 @@ const upload = multer();
 
 app.use(cors());
 
-const url = "https://predict.ultralytics.com";
-const headers = {
-  "x-api-key": "6b80a06badc0014fa56769630ac9c20a123499920f"
-};
+// const url = "https://predict.ultralytics.com";
+// const headers = {
+//   "x-api-key": "6b80a06badc0014fa56769630ac9c20a123499920f"
+// };
 
-// Define the data
+// // Define the data
+// const data = {
+//   model: "https://hub.ultralytics.com/models/QxL8NIMSWfIJFjk4KSyM",
+//   imgsz: 640,
+//   conf: 0.25,
+//   iou: 0.45
+// };
+
+const url = "https://predict.ultralytics.com";
+const headers = { "x-api-key": "6b80a06badc0014fa56769630ac9c20a123499920f" };
 const data = {
-  model: "https://hub.ultralytics.com/models/QxL8NIMSWfIJFjk4KSyM",
+  model: "https://hub.ultralytics.com/models/dwiRQRv5lyl8DxpmieaM",
   imgsz: 640,
   conf: 0.25,
-  iou: 0.45
+  iou: 0.45,
 };
 
 async function prepare_input(buf) {
@@ -68,8 +77,8 @@ app.post("/demo", upload.single("image"), async (req, res) => {
     const response = await axios.post(url, formData, {
       headers: {
         ...headers,
-        ...formData.getHeaders()
-      }
+        ...formData.getHeaders(),
+      },
     });
     const [input, img_width, img_height] = await prepare_input(req.file.buffer);
 
@@ -83,7 +92,6 @@ app.post("/demo", upload.single("image"), async (req, res) => {
     res.status(500).send({ error: error.message });
   }
 });
-
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

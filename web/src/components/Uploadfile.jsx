@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import DownloadBtn  from './DownloadBtn';
 import { clearState } from '../state/ImageSegmentation/segmentSlice'; 
 
+
 const Uploadfile = () => {
   const ImageSegmentation = useSelector((state) => state.imageSegmentation);
   const dispatch = useDispatch();
@@ -50,15 +51,13 @@ const Uploadfile = () => {
         </div>
         <input id="dropzone-file" type="file" className="hidden" onChange={(event) => getImageUploaded(event.target.files[0] || null)} />
       </label>
-      <div className="flex items-start justify-center w-full gap-6 flex-col ml-8">
+      <div className="flex items-start justify-center w-full h-full gap-6 flex-col ml-8">
         {ImageSegmentation.images && ImageSegmentation.images.map((imageData, index) => (
-          <DownloadBtn key={index} imageData={imageData} imageName={ImageSegmentation.imageNames[index]} imageBox={ImageSegmentation.imageBox[index]}/>
+          <DownloadBtn key={index} imageData={imageData} imageName={ImageSegmentation.imageNames[index]} imageBox={ImageSegmentation.imageBox[index]} />
         ))}
       </div>
-      
     </div>
-
-  )
+  );
 }
 
 export default Uploadfile
