@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import { segmentImage, highlightImg } from "../../utils/segmentation";
+import { segmentImage, highlightImg } from "../../utils/Segmentation";
 
 const segmentationSlice = createSlice({
     name: "imageSegmentation",
