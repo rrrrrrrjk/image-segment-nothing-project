@@ -1,0 +1,32 @@
+networks:
+  image_network:
+    name: image_network
+    driver: bridge
+
+services:
+  #frontend
+  frontend:
+    image: frontend:latsest
+    build:
+      context: ./web
+      dockerfile: dockerfile
+    environment:
+      - TZ=Asia/Bangkok
+    ports:
+      - "80:80"
+    networks:
+      - image_network
+  
+  #backend
+  backend:
+    image: backend:latest
+    build:
+      context: ./backend
+      dockerfile: dockerfile
+    environment:
+      - TZ=Asia/Bangkok
+    ports:
+      - "5000:5000"
+    networks:
+      - image_network
+    
