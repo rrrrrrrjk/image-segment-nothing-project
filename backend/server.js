@@ -11,12 +11,12 @@ const upload = multer();
 
 app.use(cors());
 
+const apiKey = ""; // Your api keys here
+
 const url = "https://predict.ultralytics.com";
-//const headers = { "x-api-key": "6b80a06badc0014fa56769630ac9c20a123499920f" };
-const headers = { "x-api-key": "b4b855396ff84d51061ad93b3aa1a19c6a877e5ee9" }; //ryw
+const headers = { "x-api-key": apiKey }; //ryw
 const data = {
   model: "https://hub.ultralytics.com/models/tMb1oh6heAMVVr8YZAeH", //original
-  //model: "https://hub.ultralytics.com/models/LANJV1QBekDh5wGntsli",
   imgsz: 640,
   conf: 0.25,
   iou: 0.45,
