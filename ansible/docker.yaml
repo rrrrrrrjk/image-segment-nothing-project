@@ -31,7 +31,6 @@
       community.docker.docker_compose_v2:
         project_src: /home/ryw_jakkraphat/demo/
         state: present
-        var: output
 
     - name: Display Docker Compose output
       debug:
