@@ -77,7 +77,7 @@ jobs:
           playbook: ansible/docker.yaml
           inventory: |
             [server]
-            34.31.213.141
+            35.186.150.159
 
             [all:vars]
             ansible_user=ryw_jakkraphat

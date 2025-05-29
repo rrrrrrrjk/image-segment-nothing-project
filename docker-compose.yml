@@ -10,7 +10,7 @@ services:
     environment:
       - TZ=Asia/Bangkok
     ports:
-      - "81:80"
+      - "80:80"
     networks:
       - image_network
   
