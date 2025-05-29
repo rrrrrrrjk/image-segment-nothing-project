@@ -24,8 +24,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: quality-gate
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
 
       - name: Set up Docker
         uses: docker/setup-docker-action@v2
@@ -64,18 +62,13 @@ jobs:
     name: Deploy Container
     runs-on: self-hosted
     needs: build-docker-image
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
 
+    steps:
       - name: Deploy Docker Compose
-        uses: ansible/ansible-runner-action@v1
+        uses: dawidd6/action-ansible-playbook@v3
         with:
-          playbook: docker.yaml
-          inventory: inventory.yaml
+          playbook: ansible/docker.yaml
+          inventory: ansible/hosts
           extra_vars: |
             docker_username=${{ secrets.DOCKER_USERNAME }}
             docker_password=${{ secrets.DOCKER_PASSWORD }}
-        env:
-          ANSIBLE_HOST_KEY_CHECKING: 'false'
-          ANSIBLE_CONFIG: ansible.cfg
