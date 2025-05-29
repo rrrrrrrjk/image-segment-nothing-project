@@ -59,3 +59,23 @@ jobs:
           file: ./backend/dockerfile
           push: true
           tags: rywj/backend:latest
+
+  deploy-container:
+    name: Deploy Container
+    runs-on: self-hosted
+    needs: build-docker-image
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy Docker Compose
+        uses: ansible/ansible-runner-action@v1
+        with:
+          playbook: docker.yaml
+          inventory: inventory.yaml
+          extra_vars: |
+            docker_username=${{ secrets.DOCKER_USERNAME }}
+            docker_password=${{ secrets.DOCKER_PASSWORD }}
+        env:
+          ANSIBLE_HOST_KEY_CHECKING: 'false'
+          ANSIBLE_CONFIG: ansible.cfg
