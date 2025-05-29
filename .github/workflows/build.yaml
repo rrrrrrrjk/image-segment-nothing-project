@@ -76,6 +76,6 @@ jobs:
         with:
           playbook: ansible/docker.yaml
           inventory: ansible/hosts
-          extra_vars: |
-            docker_username=${{ secrets.DOCKER_USERNAME }}
-            docker_password=${{ secrets.DOCKER_PASSWORD }}
+          options: |
+            -e docker_username=${{ secrets.DOCKER_USERNAME }}
+            -e docker_password=${{ secrets.DOCKER_PASSWORD }}
