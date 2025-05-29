@@ -75,7 +75,13 @@ jobs:
         uses: dawidd6/action-ansible-playbook@v3
         with:
           playbook: ansible/docker.yaml
-          inventory: ansible/hosts
+          inventory: |
+            [server]
+            34.31.213.141
+
+            [all:vars]
+            ansible_user=ryw_jakkraphat
+          key: ${{ secrets.ANSIBLE_PRIVATE_KEY }}
           options: |
             -e docker_username=${{ secrets.DOCKER_USERNAME }}
             -e docker_password=${{ secrets.DOCKER_PASSWORD }}
