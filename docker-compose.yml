@@ -6,7 +6,7 @@ networks:
 services:
   #frontend
   frontend:
-    image: frontend:latest
+    image: rywj/frontend:latest
     build:
       context: ./web
       dockerfile: dockerfile
@@ -19,7 +19,7 @@ services:
   
   #backend
   backend:
-    image: backend:latest
+    image: rywjbackend:latest
     build:
       context: ./backend
       dockerfile: dockerfile

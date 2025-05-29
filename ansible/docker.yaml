@@ -1,0 +1,16 @@
+---
+- name: Deploy Docker Compose
+  hosts: server
+  tasks:
+    - name: Tear down existing services
+      community.docker.docker_compose_v2:
+        project_src: /home/ryw_jakkraphat/app/docker-compose.yml
+        state: absent
+    - name: Start Docker Compose services
+      community.docker.docker_compose_v2:
+        project_src: /home/ryw_jakkraphat/app/docker-compose.yml
+        state: present
+        var: output
+    - name: Display Docker Compose output
+      debug:
+        msg: "{{ output }}"

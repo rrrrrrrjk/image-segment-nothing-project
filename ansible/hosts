@@ -1,0 +1,5 @@
+[server]
+34.31.213.141
+
+[all:vars]
+ansible_user=ryw_jakkraphat

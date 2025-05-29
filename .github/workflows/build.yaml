@@ -1,0 +1,53 @@
+name: Build Docker Image
+run-name: Quality Gate and Dependency Check
+on: 
+  push:
+    tags:
+      - "*"
+
+jobs:
+  quality-gate:
+    name: Quality Gate
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run quality gate
+        run: |
+          echo "Running quality gate checks..."
+          # Add your quality gate commands here
+          # For example, you can run a linter or static analysis tool
+  
+  build-docker-image:
+    name: Build Docker Image
+    runs-on: self-hosted
+    needs: quality-gate
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Docker
+        uses: docker/setup-docker-action@v2
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build Frontend Docker Image
+        uses: docker/build-push-action@v4
+        with:
+          context: ./web
+          file: ./web/dockerfile
+          push: true
+          tags: rywj/frontend:latest
+      
+      - name: Build Backend Docker Image
+        uses: docker/build-push-action@v4
+        with:
+          context: ./backend
+          file: ./backend/dockerfile
+          push: true
+          tags: rywj/backend:latest
