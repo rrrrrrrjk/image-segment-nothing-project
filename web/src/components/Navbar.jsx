@@ -24,10 +24,10 @@ const Navbar = () => {
       <nav className="flex px-20 justify-between py-5 bg-gradient-to-b from-gray-800 to-transparent to-70% text-white z-50 w-full h-1/6">
         <div className="flex flex-col xl:-space-y-3 ">
           <h1 className="font-grifter text-[22px] xl:text-[32px] drop-shadow-md">
-            Segment Nothing
+            Segment Something
           </h1>
           <span className="font-inter text-[10px] xl:text-[16px] text-slate-400 drop-shadow-md">
-            Research by Su team
+            Research by SU team
           </span>
         </div>
         <ul className="xl:flex items-center list-none gap-40 font-grifter text-[16px] hidden">
