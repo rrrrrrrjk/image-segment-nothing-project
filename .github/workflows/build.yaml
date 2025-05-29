@@ -62,13 +62,15 @@ jobs:
 
   deploy-container:
     name: Deploy Container
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     needs: build-docker-image
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        
+        with:
+          set-safe-directory: false
+
       - name: Deploy Docker Compose
         uses: dawidd6/action-ansible-playbook@v3
         with:
